@@ -350,9 +350,9 @@ button { font: inherit; }
   position: relative;
   min-height: 348px;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr;
   align-content: center;
-  align-items: end;
+  align-items: start;
   column-gap: 30px;
   padding-top: 57px;
   padding-bottom: 62px;
@@ -375,9 +375,7 @@ button { font: inherit; }
 .closing .eyebrow-line { background: #677624; }
 .closing h2 { margin-top: 19px; font-size: clamp(36px, 3.6vw, 50px); }
 .closing h2 span { color: #fff; }
-.button-light { position: relative; z-index: 1; margin-bottom: 8px; color: #fff; background: #677624; }
-.button-light:hover { background: #4d5a1d; }
-.closing-note { grid-column: 1 / -1; margin: 28px 0 0; color: #a4b3a5; font-size: 10px; }
+.closing-note { margin: 28px 0 0; color: #a4b3a5; font-size: 10px; }
 .site-footer {
   min-height: 76px;
   display: flex;
@@ -478,7 +476,6 @@ button { font: inherit; }
   .about-copy > p:not(.about-tagline) { font-size: 12px; }
   .closing { min-height: 350px; grid-template-columns: 1fr; align-items: start; gap: 27px; padding-top: 71px; padding-bottom: 38px; }
   .closing h2 { font-size: 39px; }
-  .button-light { justify-self: start; margin: 0; }
   .closing-note { margin-top: 3px; line-height: 1.6; }
   .site-footer { min-height: 82px; flex-wrap: wrap; gap: 5px 14px; padding: 15px 6%; }
   .site-footer > span:nth-child(2) { order: 3; width: 100%; }
