@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore an illustrative MOTIVE planning dashboard for pedestrian connectivity and transit access in Tallahassee, Florida."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Tallahassee Pilot — MOTIVE</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="tallahassee.css" />
+    <script src="tallahassee.js" defer></script>
+  </head>
+  <body class="city-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="MOTIVE home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>MOTIVE</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span><span></span>
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+        <a href="index.html#platform">Platform</a>
+        <a href="index.html#workflow">How it works</a>
+        <a href="tallahassee.html" aria-current="page">Tallahassee pilot</a>
+        <a class="nav-cta" href="index.html">Back to MOTIVE <span aria-hidden="true">↖</span></a>
+      </nav>
+    </header>
+
+    <main class="city-dashboard">
+      <section class="city-intro">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> Mobility access study · Tallahassee, Florida</p>
+          <h1>Make the next connection<br /><span>easier to reach.</span></h1>
+          <p class="city-description">
+            A focused look at how sidewalk continuity and public transportation access connect people to everyday destinations.
+          </p>
+        </div>
+        <div class="scenario-badge">
+          <span class="scenario-icon" aria-hidden="true">✳</span>
+          <span><strong>Concept dashboard</strong><small>Illustrative sample data · Not to scale</small></span>
+        </div>
+      </section>
+
+      <section class="indicator-grid" aria-label="Illustrative mobility indicators">
+        <article class="indicator-card">
+          <div class="indicator-heading"><span>Sidewalk connectivity</span><span class="indicator-icon connectivity-icon" aria-hidden="true">⌁</span></div>
+          <div class="indicator-value">62<span>%</span></div>
+          <div class="indicator-track" role="progressbar" aria-label="Illustrative sidewalk connectivity" aria-valuemin="0" aria-valuemax="100" aria-valuenow="62"><i style="width: 62%"></i></div>
+          <p>Example of connected sidewalk links in the study area</p>
+        </article>
+        <article class="indicator-card">
+          <div class="indicator-heading"><span>Transit within an 8-minute walk</span><span class="indicator-icon transit-icon" aria-hidden="true">↗</span></div>
+          <div class="indicator-value">71<span>%</span></div>
+          <div class="indicator-track" role="progressbar" aria-label="Illustrative share within an eight-minute walk of transit" aria-valuemin="0" aria-valuemax="100" aria-valuenow="71"><i style="width: 71%"></i></div>
+          <p>Example share of homes near a mapped stop</p>
+        </article>
+        <article class="indicator-card indicator-card-accent">
+          <div class="indicator-heading"><span>Candidate gaps to assess</span><span class="indicator-icon gap-icon" aria-hidden="true">!</span></div>
+          <div class="indicator-value">06</div>
+          <p>Illustrative areas where access signals overlap</p>
+          <a href="#planning-list" class="indicator-link">Review assessment list <span aria-hidden="true">↓</span></a>
+        </article>
+      </section>
+
+      <section class="city-workspace" aria-label="Tallahassee mobility planning workspace">
+        <div class="map-panel">
+          <div class="panel-heading map-heading">
+            <div>
+              <p class="panel-kicker">NETWORK VIEW <span>·</span> 01</p>
+              <h2>Pedestrian + transit access</h2>
+            </div>
+            <span class="map-scale"><i></i> SCHEMATIC</span>
+          </div>
+          <div class="map-toolbar">
+            <span>MAP LAYERS</span>
+            <div class="layer-toggles" role="group" aria-label="Toggle map layers">
+              <button type="button" class="layer-toggle is-on" data-map-layer="sidewalks" aria-pressed="true"><i class="legend-line sidewalk-key"></i>Sidewalks</button>
+              <button type="button" class="layer-toggle is-on" data-map-layer="transit" aria-pressed="true"><i class="legend-line transit-key"></i>Transit routes</button>
+              <button type="button" class="layer-toggle is-on" data-map-layer="stops" aria-pressed="true"><i class="legend-stop"></i>Stops</button>
+              <button type="button" class="layer-toggle is-on" data-map-layer="pois" aria-pressed="true"><i class="legend-poi"></i>Destinations</button>
+            </div>
+          </div>
+          <div class="city-map">
+            <svg class="city-map-art" viewBox="0 0 1000 570" role="img" aria-labelledby="city-map-title city-map-desc" preserveAspectRatio="xMidYMid meet">
+              <title id="city-map-title">Schematic pedestrian and transit access map for Tallahassee, Florida</title>
+              <desc id="city-map-desc">An illustrative city street grid with sidewalk connections, transit routes, stops, destinations, and three selectable candidate assessment areas. The map is not geographically precise.</desc>
+              <defs>
+                <pattern id="city-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+                  <path d="M32 0H0V32" fill="none" stroke="#e8ece8" stroke-width="1" />
+                </pattern>
+                <filter id="marker-shadow" x="-60%" y="-60%" width="220%" height="220%">
+                  <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#112e3c" flood-opacity=".16" />
+                </filter>
+              </defs>
+              <rect width="1000" height="570" fill="#f3f6f2" />
+              <rect width="1000" height="570" fill="url(#city-grid)" />
+              <g class="city-blocks" aria-hidden="true">
+                <path d="M53 54h124v59H53zM203 54h108v59H203zM337 54h125v59H337zM489 54h102v59H489zM618 54h118v59H618zM761 54h184v59H761z" />
+                <path d="M53 139h89v58H53zM168 139h145v58H168zM338 139h82v58h-82zM446 139h145v58H446zM620 139h116v58H620zM766 139h179v58H766z" />
+                <path d="M53 226h124v64H53zM203 226h108v64H203zM338 226h125v64H338zM490 226h101v64H490zM619 226h118v64H619zM761 226h184v64H761z" />
+                <path d="M53 319h89v62H53zM168 319h145v62H168zM338 319h82v62h-82zM446 319h145v62H446zM620 319h116v62H620zM766 319h179v62H766z" />
+                <path d="M53 410h124v67H53zM203 410h108v67H203zM338 410h125v67H338zM490 410h101v67H490zM619 410h118v67H619zM761 410h184v67H761z" />
+                <path d="M53 506h89v32H53zM168 506h145v32H168zM338 506h82v32h-82zM446 506h145v32H446zM620 506h116v32H620zM766 506h179v32H766z" />
+              </g>
+              <g class="street-network" aria-hidden="true">
+                <path d="M22 124H978M22 211H978M22 303H978M22 395H978M22 491H978" />
+                <path d="M188 28V548M324 28V548M475 28V548M605 28V548M750 28V548" />
+                <path d="M-20 458 C150 425 230 419 326 371 S507 324 619 338 827 371 1020 299" class="street-arterial" />
+                <path d="M277 -20 C313 74 346 144 408 222 S506 372 528 590" class="street-arterial" />
+                <path d="M708 -20 C676 68 658 157 694 235 S753 400 719 590" class="street-arterial" />
+              </g>
+              <g class="street-labels" aria-hidden="true">
+                <text x="66" y="207">W TENNESSEE ST</text>
+                <text x="63" y="388">W GAINES ST</text>
+                <text x="800" y="297">APALACHEE PKWY</text>
+                <text transform="translate(317 101) rotate(90)">N MONROE ST</text>
+                <text transform="translate(600 415) rotate(90)">S ADAMS ST</text>
+                <text x="78" y="83">MIDTOWN</text>
+                <text x="784" y="83">DOWNTOWN</text>
+              </g>
+              <g id="layer-sidewalks" class="network-layer" aria-label="Illustrative sidewalk network">
+                <path d="M67 124H180M194 124H315M333 124H462M484 124H594M614 124H741M765 124H932" />
+                <path d="M67 211H165M181 211H307M338 211H450M470 211H585M623 211H732M757 211H932" />
+                <path d="M67 303H179M199 303H316M336 303H458M486 303H591M611 303H743M766 303H934" />
+                <path d="M67 395H151M175 395H309M337 395H451M472 395H589M618 395H729M760 395H932" />
+                <path d="M67 491H180M196 491H314M336 491H462M484 491H588M614 491H743M766 491H932" />
+                <path d="M188 65V112M188 139V196M188 225V288M188 318V377M188 408V477M324 65V113M324 141V197M324 226V288M324 320V380M324 409V477M475 65V112M475 141V196M475 226V288M475 319V379M475 411V477M605 65V111M605 141V197M605 226V286M605 321V378M605 411V476M750 65V111M750 140V196M750 225V287M750 320V379M750 410V478" />
+              </g>
+              <g id="layer-transit" class="network-layer" aria-label="Illustrative transit routes">
+                <path d="M69 395 C177 383 241 370 329 325 S503 281 611 303 798 347 930 294" class="transit-route transit-route-main" />
+                <path d="M274 63 C303 144 349 199 423 250 S552 366 568 486" class="transit-route transit-route-alt" />
+                <path d="M713 65 C668 162 653 207 691 274 S743 388 721 473" class="transit-route transit-route-alt" />
+              </g>
+              <g id="layer-stops" class="network-layer" aria-label="Illustrative transit stops">
+                <g class="transit-stop"><circle cx="207" cy="381" r="8" /><circle cx="207" cy="381" r="2" /></g>
+                <g class="transit-stop"><circle cx="329" cy="325" r="8" /><circle cx="329" cy="325" r="2" /></g>
+                <g class="transit-stop"><circle cx="446" cy="284" r="8" /><circle cx="446" cy="284" r="2" /></g>
+                <g class="transit-stop"><circle cx="611" cy="303" r="8" /><circle cx="611" cy="303" r="2" /></g>
+                <g class="transit-stop"><circle cx="760" cy="339" r="8" /><circle cx="760" cy="339" r="2" /></g>
+                <g class="transit-stop"><circle cx="531" cy="402" r="8" /><circle cx="531" cy="402" r="2" /></g>
+              </g>
+              <g id="layer-pois" class="network-layer" aria-label="Illustrative public destinations">
+                <g class="poi-marker"><rect x="272" y="158" width="15" height="15" rx="3" /><text x="293" y="169">FSU</text></g>
+                <g class="poi-marker"><rect x="816" y="172" width="15" height="15" rx="3" /><text x="837" y="184">CAPITOL</text></g>
+                <g class="poi-marker"><rect x="411" y="431" width="15" height="15" rx="3" /><text x="432" y="443">FAMU</text></g>
+                <g class="poi-marker"><rect x="672" y="438" width="15" height="15" rx="3" /><text x="693" y="450">CASCADES PARK</text></g>
+              </g>
+              <g class="assessment-zone is-selected" data-zone="midtown" role="button" tabindex="0" aria-pressed="true" aria-label="Select Midtown connector assessment area" filter="url(#marker-shadow)">
+                <circle class="zone-ring" cx="449" cy="211" r="22" /><circle class="zone-core" cx="449" cy="211" r="11" /><text x="449" y="215">A</text>
+              </g>
+              <g class="assessment-zone" data-zone="downtown" role="button" tabindex="0" aria-pressed="false" aria-label="Select Downtown stop access assessment area" filter="url(#marker-shadow)">
+                <circle class="zone-ring" cx="779" cy="303" r="22" /><circle class="zone-core" cx="779" cy="303" r="11" /><text x="779" y="307">B</text>
+              </g>
+              <g class="assessment-zone" data-zone="southside" role="button" tabindex="0" aria-pressed="false" aria-label="Select Southside campus connection assessment area" filter="url(#marker-shadow)">
+                <circle class="zone-ring" cx="475" cy="443" r="22" /><circle class="zone-core" cx="475" cy="443" r="11" /><text x="475" y="447">C</text>
+              </g>
+            </svg>
+            <span class="map-north" aria-hidden="true">N <i>↑</i></span>
+            <div class="map-note"><span class="map-note-dot"></span> Illustrative routes, stops &amp; destinations</div>
+          </div>
+          <div class="map-footnote">
+            <span><i class="footnote-sidewalk"></i> Sidewalk link</span>
+            <span><i class="footnote-transit"></i> Transit route</span>
+            <span><i class="footnote-stop"></i> Example stop</span>
+            <span><i class="footnote-zone">A</i> Assessment area</span>
+          </div>
+        </div>
+
+        <aside class="planning-rail">
+          <article class="insight-card">
+            <div class="rail-card-heading"><span class="signal-icon" aria-hidden="true">✳</span><span class="panel-kicker">ACCESS SIGNAL</span></div>
+            <h2>Small gaps can make a long trip.</h2>
+            <p>Look for missing sidewalk links between homes, stops, and everyday destinations before the trip becomes a barrier.</p>
+            <span class="insight-caveat">Assessment hypothesis · Verify locally</span>
+          </article>
+
+          <article class="selected-area-card" aria-live="polite">
+            <div class="rail-card-heading"><span class="panel-kicker">SELECTED AREA</span><span class="selected-area-id" data-selected-id>A</span></div>
+            <h2 data-selected-title>Midtown connector</h2>
+            <p data-selected-description>A sample sidewalk-continuity signal between neighborhood destinations and a transit corridor.</p>
+            <div class="selected-area-stats"><span data-selected-stops>2 example stops</span><i></i><span data-selected-pois>3 destinations</span></div>
+            <p class="selected-action"><strong>Suggested next step</strong><span data-selected-action>Field-check sidewalk gaps and crossing conditions.</span></p>
+          </article>
+
+          <section class="planning-card" id="planning-list" aria-labelledby="planning-title">
+            <div class="panel-heading planning-heading">
+              <div><p class="panel-kicker">PLANNING DASHBOARD <span>·</span> 02</p><h2 id="planning-title">Areas to assess</h2></div>
+              <span class="area-count">03</span>
+            </div>
+            <p class="planning-intro">Illustrative priorities for review, not confirmed project recommendations.</p>
+            <div class="priority-list">
+              <button class="priority-item is-selected" type="button" data-zone="midtown" aria-pressed="true">
+                <span class="priority-letter">A</span>
+                <span class="priority-copy"><strong>Midtown connector</strong><small>Sidewalk continuity · 2 example stops</small></span>
+                <span class="priority-rank rank-high">HIGH</span>
+              </button>
+              <button class="priority-item" type="button" data-zone="downtown" aria-pressed="false">
+                <span class="priority-letter">B</span>
+                <span class="priority-copy"><strong>Downtown stop access</strong><small>Crossings · 4 nearby destinations</small></span>
+                <span class="priority-rank rank-review">REVIEW</span>
+              </button>
+              <button class="priority-item" type="button" data-zone="southside" aria-pressed="false">
+                <span class="priority-letter">C</span>
+                <span class="priority-copy"><strong>Southside campus link</strong><small>Walk shed · 3 example stops</small></span>
+                <span class="priority-rank rank-medium">MEDIUM</span>
+              </button>
+            </div>
+            <p class="priority-disclaimer">Ranking shown for demonstration. Confirm with local inventory, accessibility review, and community input.</p>
+          </section>
+        </aside>
+      </section>
+
+      <section class="data-note" aria-label="Data note">
+        <span class="data-note-icon" aria-hidden="true">i</span>
+        <p><strong>Illustrative planning scenario.</strong> The map, scores, stops, and assessment areas on this page are sample content for the MOTIVE interface, not verified City of Tallahassee data or engineering findings. A live study should use current sidewalk and curb-ramp inventories, transit feeds, crossing conditions, destinations, and community input.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer city-footer">
+      <a class="brand brand-footer" href="index.html" aria-label="MOTIVE home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>MOTIVE</span>
+      </a>
+      <span>Tallahassee pilot · Pedestrian connectivity &amp; transit access</span>
+      <a href="index.html">MOTIVE platform <span aria-hidden="true">↗</span></a>
+    </footer>
+  </body>
+</html>
