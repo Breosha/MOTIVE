@@ -294,12 +294,12 @@ button { font: inherit; }
   letter-spacing: -.055em;
 }
 .section-intro { width: 300px; margin: 0 2px 6px 0; color: #718077; font-size: 12px; line-height: 1.8; }
-.workflow-grid { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid #e2e8de; }
-.workflow-card { min-height: 250px; padding: 21px 20px 18px; border-right: 1px solid #e2e8de; transition: background .25s ease, transform .25s ease; }
+.workflow-grid { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid #95a494; }
+.workflow-card { min-height: 250px; padding: 21px 20px 18px; border-right: 1px solid #95a494; transition: background .25s ease, transform .25s ease; }
 .workflow-card:last-child { border-right: 0; }
 .workflow-card:hover { position: relative; z-index: 1; background: #f8fbf5; transform: translateY(-4px); }
 .card-top { display: flex; align-items: center; justify-content: space-between; }
-.step-number { color: #90a087; font: 400 9px var(--mono); }
+.step-number { color: var(--ink); font: 400 9px var(--mono); }
 .step-icon { width: 31px; height: 31px; position: relative; display: inline-flex; align-items: center; justify-content: center; color: #006d6a; }
 .icon-integrate i { position: absolute; width: 7px; height: 7px; border: 1px solid #87a37a; border-radius: 50%; }
 .icon-integrate i:nth-child(1) { left: 2px; top: 4px; }
@@ -321,9 +321,9 @@ button { font: inherit; }
 .icon-visualize i:nth-child(1) { width: 25px; height: 25px; }
 .icon-visualize i:nth-child(2) { width: 15px; height: 15px; }
 .icon-visualize i:nth-child(3) { width: 5px; height: 5px; background: #a7cc85; }
-.workflow-card h3 { margin: 27px 0 9px; font: 700 19px var(--display); letter-spacing: -.035em; }
-.workflow-card p { min-height: 60px; max-width: 220px; margin: 0; color: #77837a; font-size: 11px; line-height: 1.7; }
-.card-footer { display: flex; justify-content: space-between; margin-top: 19px; padding-top: 12px; color: #839080; border-top: 1px solid #e8ece5; font-size: 8px; }
+.workflow-card h3 { margin: 27px 0 9px; color: var(--ink); font: 700 19px var(--display); letter-spacing: -.035em; }
+.workflow-card p { min-height: 60px; max-width: 220px; margin: 0; color: var(--ink); font-size: 11px; line-height: 1.7; }
+.card-footer { display: flex; justify-content: space-between; margin-top: 19px; padding-top: 12px; color: var(--ink); border-top: 1px solid #95a494; font-size: 8px; }
 .card-footer b { color: #719063; font-size: 10px; }
 
 .about {
@@ -408,7 +408,7 @@ button { font: inherit; }
   .workflow-grid { grid-template-columns: repeat(2, 1fr); }
   .workflow-card { min-height: 230px; }
   .workflow-card:nth-child(2) { border-right: 0; }
-  .workflow-card:nth-child(-n+2) { border-bottom: 1px solid #e2e8de; }
+  .workflow-card:nth-child(-n+2) { border-bottom: 1px solid #95a494; }
   .about { grid-template-columns: 1fr; gap: 24px; padding-top: 78px; padding-bottom: 84px; }
 }
 @media (max-width: 620px) {
@@ -465,8 +465,8 @@ button { font: inherit; }
   .section-heading h2 { font-size: 37px; }
   .section-intro { width: auto; max-width: 380px; font-size: 11px; }
   .workflow-grid { grid-template-columns: 1fr; }
-  .workflow-card { min-height: 205px; padding: 19px; border-right: 0; border-bottom: 1px solid #e2e8de; }
-  .workflow-card:nth-child(3) { border-bottom: 1px solid #e2e8de; }
+  .workflow-card { min-height: 205px; padding: 19px; border-right: 0; border-bottom: 1px solid #95a494; }
+  .workflow-card:nth-child(3) { border-bottom: 1px solid #95a494; }
   .workflow-card:last-child { border-bottom: 0; }
   .workflow-card h3 { margin-top: 20px; }
   .workflow-card p { min-height: auto; }
