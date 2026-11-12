@@ -326,6 +326,26 @@ button { font: inherit; }
 .card-footer { display: flex; justify-content: space-between; margin-top: 19px; padding-top: 12px; color: #839080; border-top: 1px solid #e8ece5; font-size: 8px; }
 .card-footer b { color: #719063; font-size: 10px; }
 
+.about {
+  display: grid;
+  grid-template-columns: minmax(150px, .7fr) minmax(0, 1.6fr);
+  gap: clamp(42px, 8vw, 118px);
+  padding-top: 98px;
+  padding-bottom: 105px;
+  background: #f3f5ef;
+}
+.about-heading { padding-top: 8px; }
+.about-copy { max-width: 770px; }
+.about-copy h2 {
+  margin: 0 0 29px;
+  color: #112e3c;
+  font: 600 clamp(32px, 3.6vw, 48px)/1.14 var(--display);
+  letter-spacing: -.05em;
+}
+.about-copy h2 strong { font-weight: 600; }
+.about-copy > p:not(.about-tagline) { margin: 0 0 17px; color: #596c66; font-size: 13px; line-height: 1.85; }
+.about-tagline { margin: 29px 0 0; color: #006d6a; font-size: 14px; line-height: 1.6; }
+
 .closing {
   position: relative;
   min-height: 348px;
@@ -391,6 +411,7 @@ button { font: inherit; }
   .workflow-card { min-height: 230px; }
   .workflow-card:nth-child(2) { border-right: 0; }
   .workflow-card:nth-child(-n+2) { border-bottom: 1px solid #e2e8de; }
+  .about { grid-template-columns: 1fr; gap: 24px; padding-top: 78px; padding-bottom: 84px; }
 }
 @media (max-width: 620px) {
   .site-header { height: 68px; padding: 0 6%; }
@@ -452,6 +473,9 @@ button { font: inherit; }
   .workflow-card h3 { margin-top: 20px; }
   .workflow-card p { min-height: auto; }
   .card-footer { max-width: 240px; margin-top: 15px; }
+  .about { gap: 20px; padding-top: 65px; padding-bottom: 70px; }
+  .about-copy h2 { font-size: 34px; }
+  .about-copy > p:not(.about-tagline) { font-size: 12px; }
   .closing { min-height: 350px; grid-template-columns: 1fr; align-items: start; gap: 27px; padding-top: 71px; padding-bottom: 38px; }
   .closing h2 { font-size: 39px; }
   .button-light { justify-self: start; margin: 0; }
